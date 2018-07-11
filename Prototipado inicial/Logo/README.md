@@ -35,7 +35,7 @@ Después de realizar una abstracción de las letras CECC, se logró definir como
 
 ### 6. Isologotipo en formato horizontal para aplicación negativa
 
-![Isologotipo Horizontal en negativo](logo%20png/isologotipo_negativo.png.png?raw=true)
+![Isologotipo Horizontal en negativo](logo%20png/isologotipo_negativo.png?raw=true)
 
 ### 7. Isologotipo en formato horizontal para aplicación negativa con complemento
 
