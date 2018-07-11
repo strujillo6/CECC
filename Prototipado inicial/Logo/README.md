@@ -1,4 +1,4 @@
-[< Volver a la sección anterior](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial)
+[< Volver a la sección anterior](https://github.com/strujillo6/CECC)
 
 # Logotipo del Proyecto
 
@@ -6,7 +6,7 @@
 
 ## Descripción
 
-Después de realizar una abstracción de las letras CECC, se logró definir como isotipo o símbolo del proyecto una abeja formada por varias letras C y un hexágono como cabeza, se decidió el uso de esta figura ya que en la naturaleza las abejas se encargan de polinizar y llevar la semilla para que se expandan los campos de flores, y con la aplicación que desarrollremos en el curso, queremos que cada ciudadano lleve esa semilla del cambio para llevar una sana convivencia ciudadana y la pueda esparcir a los demás aplicando una correcta ética.
+Después de realizar una abstracción de las letras CECC, se logró definir como isotipo o símbolo del proyecto una abeja formada por varias letras C y un hexágono como cabeza, se decidió el uso de esta figura ya que en la naturaleza las abejas se encargan de polinizar y llevar la semilla para que se expandan los campos de flores, y con la aplicación que desarrollaremos en el curso, queremos que cada ciudadano lleve esa semilla del cambio para tener una sana convivencia ciudadana y la pueda esparcir a los demás aplicando una correcta ética.
 
 ## Aplicaciones del logo
 
@@ -45,4 +45,4 @@ Después de realizar una abstracción de las letras CECC, se logró definir como
 
 # Prototipado Inicial
 
-[< Volver a la sección anterior](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial)
+[< Volver a la sección anterior](https://github.com/strujillo6/CECC)
