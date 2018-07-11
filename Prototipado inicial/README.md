@@ -1,1 +1,0 @@
-control de prototipo
