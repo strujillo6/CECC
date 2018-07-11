@@ -1,6 +1,6 @@
 # Logotipo del Proyecto
 
-![Isologotipo](logo%20svg/isologotipo_complemento_horizontal.svg?raw=true')
+![Isologotipo ](logo%20png/isologotipo_complemento_horizontal.png?raw=true)
 
 ## Descripción
 
