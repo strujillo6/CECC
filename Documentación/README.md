@@ -169,7 +169,19 @@ Requisitos funcionales del sistema por tipos de usuario.
 
 ## 3.3 Requerimientos No Funcionales
 
+- Integridad de Datos: el requisito más importante que el sistema.
+
+- Disponibilidad: Viene de la mano con el requisito anterior, es vital que el usuario tenga acceso a los datos en cualquier momento posible.
+
+- La Documentación: necesaria para que el usuario sea capaz de resolver dudas menores que vayan surgiendo sobre la marcha en el uso de su nuevo sistema, debe ser completa pero no extensa para que pueda ser consultada con facilidad y realmente sea útil.
+
+
 ## 3.4 Otros Requisitos
+
+- Envío de notificaciones y correos electrónicos sobre las acciones del usuario.
+
+- Ayuda en línea para resolver posibles problemas que tengan los usuarios en l momento de usar la aplicación.
+
 
 
 
