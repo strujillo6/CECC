@@ -1,3 +1,9 @@
+# Documentación
+
+1.  [ Documento de Especificación de Requerimientos
+](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Planeacion/sketchs)
+
+_____________________________
 # Prototipado Inicial
 
 1.  [ Sketchs](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Planeacion/sketchs)
