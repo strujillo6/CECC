@@ -1,12 +1,12 @@
 # Documentación
 
 1.  [ Documento de Especificación de Requerimientos
-](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Planeacion/sketchs)
+](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
 
 _____________________________
 # Prototipado Inicial
 
-1.  [ Sketchs](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Planeacion/sketchs)
+1.  [ Sketchs](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Mesa%20de%20trabajo/sketchs)
 2. [Wireframe "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 3. [Mockup "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 4. [Logo](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Logo)

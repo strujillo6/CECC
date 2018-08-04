@@ -1,3 +1,5 @@
+[< Volver a la sección anterior](https://github.com/strujillo6/CECC)
+
 # CULTURA ÉTICA Y CONVIVENCIA CIUDADANA
 Documento de Especificación de Requerimientos de Software
 
@@ -7,8 +9,6 @@ Documento de Especificación de Requerimientos de Software
 - Sergio Trujillo
 
 Version: 1.0 Fecha: 27/Julio/2018
-
------
 
 # 1. Introducción
 
