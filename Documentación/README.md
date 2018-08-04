@@ -3,10 +3,23 @@
 # Indice
 
  1. [Introducción](#1-introducción)
-    1. [Proposito](#11-propósito)
-    2. [Ámbito del sistema](#12-Ámbito-del-sistema)
-    3. [Definiciones acrónimos y abreviaturas](#13-definiciones-acrónimos-y-abreviaturas)
-
+    - [Proposito](#11-propósito)
+    - [Ámbito del sistema](#12-Ámbito-del-sistema)
+    - [Definiciones acrónimos y abreviaturas](#13-definiciones-acrónimos-y-abreviaturas)
+    - [Referencias](#14-referencias)
+2. [Descripción general](#2-descripción-general)
+    - [Perspectiva del producto](#21-perspectiva-del-producto)
+    - [Funciones del producto](#22-funciones-del-producto)
+    - [Características de los usuarios](#23-características-de-los-usuarios)
+    - [Restricciones](#24-restricciones)
+    - [Suposiciones y dependencias](#25-suposiciones-y-dependencias)
+    - [Requerimientos futuros](#26-requerimientos-futuros)
+3. [Requerimientos específicos](#3-requerimientos-específicos)
+    - [Interfaz](#31-interfaz)
+    - [Requisitos funcionales](#32-requisitos-funcionales)
+    - [Requerimientos no funcionales](#33-requerimientos-no-funcionales)
+    - [Otros Requisitos](#34-otros-requisitos)
+----
 # CULTURA ÉTICA Y CONVIVENCIA CIUDADANA
 Documento de Especificación de Requerimientos de Software
 
@@ -156,6 +169,7 @@ Requisitos funcionales del sistema por tipos de usuario.
 
 ## 3.3 Requerimientos No Funcionales
 
+## 3.4 Otros Requisitos
 
 
 
