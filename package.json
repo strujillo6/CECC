@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@nuxtjs/onesignal": "^2.0.0",
+    "@nuxtjs/pwa": "^2.0.8"
+  }
+}

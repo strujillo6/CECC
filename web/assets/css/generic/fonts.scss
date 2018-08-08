@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('~/assets/font/OpenSans.eot');
+    src: url('~/assets/font/OpenSans.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/font/OpenSans.woff2') format('woff2'),
+        url('~/assets/font/OpenSans.woff') format('woff'),
+        url('~/assets/font/OpenSans.ttf') format('truetype'),
+        url('~/assets/font/OpenSans.svg#OpenSans-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('~/assets/font/Lora.eot');
+    src: url('~/assets/font/Lora.eot?#iefix') format('embedded-opentype'),
+        url('~/assets/font/Lora.woff2') format('woff2'),
+        url('~/assets/font/Lora.woff') format('woff'),
+        url('~/assets/font/Lora.ttf') format('truetype'),
+        url('~/assets/font/Lora.svg#Lora-Regular') format('svg');
+}

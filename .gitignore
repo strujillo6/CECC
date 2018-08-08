@@ -1,1 +1,3 @@
 node_modules/
+webCECC/node_modules
+sw.*
