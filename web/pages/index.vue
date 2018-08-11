@@ -31,7 +31,10 @@
         {{ online ? 'online' : 'offline' }}
       </div>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="btn button--green" rel="noopener">documentation</a>
+        <button target="_blank" class="btn" rel="noopener">documentation</button>
+        <button target="_blank" class="btn-accent" rel="noopener">documentation</button>
+        <button target="_blank" class="btn-flat" rel="noopener">documentation</button>
+        <button target="_blank" class="btn-circle" rel="noopener">documentation</button>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey" rel="noopener">GitHub</a>
       </div>
     </div>
@@ -40,7 +43,6 @@
 
 <script>
   import Logo from '~/components/Logo.vue'
-
   export default {
     components: {Logo},
     data () {

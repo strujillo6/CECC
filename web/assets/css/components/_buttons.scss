@@ -1,0 +1,52 @@
+[class^="btn"]{
+    min-width: em(64px);
+    padding: 0 em(16px);
+    height: em(36px);
+    line-height: em(36px);
+    background-color: transparent;
+    color: var(--text-primary-light);
+    border: solid em(1.5px) var(--text-primary-light);
+    border-radius: em(8px);
+    transition: all .25s ease-in;
+    margin:0 em(4px) em(8px);
+    &:hover{
+        background-color:var(--assent); 
+    }
+    &:focus{
+        outline: 0;
+        background: var(--assent);
+    }
+}
+.btn{
+    &-accent{
+        background-color: var(--assent);
+        color: var(--text-primary-light);
+        border: none;
+        &:hover{
+        }
+        &:focus{
+        }
+    }
+    &-flat{
+        background-color: transparent; 
+        &:hover{
+        }
+        &:focus{
+        }
+    }
+    &-icon{
+        &:hover{
+        }
+        &:focus{
+        }
+    }
+    &-circle{
+        min-width: em(54px);
+        height: (54px);
+        border-radius: em(27px);
+        &:hover{
+        }
+        &:focus{
+        }
+    }
+}

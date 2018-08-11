@@ -1,6 +1,6 @@
 # cecc
 
-> Pagina de la aplicacion cecc (Cultura Etica y Convivencia Ciudadana)
+> Pagina de atrrizaje para la aplicacion cecc (Cultura Etica y Convivencia Ciudadana)
 
 ## Build Setup
 

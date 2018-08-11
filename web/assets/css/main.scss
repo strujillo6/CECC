@@ -1,25 +1,21 @@
 // SETTINGS
-
 @import 'settings/variable';
 
 // TOOLS
-
 @import '../../node_modules/ed-grid/ed-grid';
 
 // GENERIC
-
 @import 'generic/normalize';
 @import 'generic/fonts';
 
 // ELEMENTS
 
 // OBJECTS
-
 @import 'objects/layout';
 
 // COMPONENTS
-
 @import 'components/typography';
+@import 'components/buttons';
 
 // UTILITIES
 
