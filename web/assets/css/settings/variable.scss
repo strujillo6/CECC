@@ -21,6 +21,14 @@
 
   --text-primary: #141618;
   --text-secundary: #717274;
+  --text-primary-light:  rgba(255, 255, 255, 0.87);
+  --text-secundary-light: rgba(255, 255, 255, 0.54);
 
   // --gradient: linear-gradient(to left top, rgb(76,175,80) 1%,rgb(46,154,91) 38%,rgb(0,121,107) 100%);
 }
+
+// Variables de configuracion para ed-grid
+$buttons    : false; //No compila los botones
+$cssCore    : false; // No compila todo el CSS
+$cssHelpers : true;  // Ayudas Activadas
+$devMode    : false; // Para activar la ayuda visual

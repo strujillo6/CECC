@@ -2,7 +2,8 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {},
+  build: {
+  },
   /*
   ** Headers
   ** Common headers are already provided by @nuxtjs/pwa preset
