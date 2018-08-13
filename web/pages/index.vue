@@ -31,10 +31,14 @@
         {{ online ? 'online' : 'offline' }}
       </div>
       <div class="links">
-        <button target="_blank" class="btn" rel="noopener">documentation</button>
-        <button target="_blank" class="btn-accent" rel="noopener">documentation</button>
-        <button target="_blank" class="btn-flat" rel="noopener">documentation</button>
-        <button target="_blank" class="btn-circle" rel="noopener">documentation</button>
+        <button target="_blank" class="btn" rel="noopener">
+          <div class="btn__text">Button 1</div>
+        </button>
+        <button target="_blank" class="btn--accent" rel="noopener">documentation</button>
+        <button target="_blank" class="btn--flat" rel="noopener">
+          <div class="btn__text">Button flat</div>
+        </button>
+        <button target="_blank" class="btn--circle" rel="noopener">documentation</button>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey" rel="noopener">GitHub</a>
       </div>
     </div>
