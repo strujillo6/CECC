@@ -1,5 +1,5 @@
 <template>
-  <v-app class="teal">
+  <v-app class="indigo">
     <toolbar
       title="CECC"
     />
