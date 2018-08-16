@@ -1,14 +1,23 @@
 module.exports = {
+  mode: 'spa',
+  assetsSubDirectory: 'static',
+  assetsPublicPath: '',
+  /*
+  ** Headers of the page
+  */
+  head: {
+    title: 'Cecc',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'none' }
+    ]
+  },
   /*
   ** Build configuration
   */
   build: {
   },
-  /*
-  ** Headers
-  ** Common headers are already provided by @nuxtjs/pwa preset
-  */
-  head: {},
   /*
   ** Customize the progress-bar color
   */
@@ -23,7 +32,8 @@ module.exports = {
   ** Modules
   */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/vuetify'
   ],
   /*
   **CSS

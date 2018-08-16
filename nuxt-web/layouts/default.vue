@@ -1,5 +1,14 @@
 <template>
-  <div class="container">
+  <v-app class="teal">
+    <toolbar
+      title="CECC"
+    />
     <nuxt/>
-  </div>
+  </v-app>
 </template>
+<script>
+import Toolbar from '~/components/header/toolbar.vue'
+export default {
+  components: {Toolbar}
+}
+</script>

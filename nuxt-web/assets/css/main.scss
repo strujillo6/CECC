@@ -1,22 +1,28 @@
 // SETTINGS
-// @import 'settings/variable.1';
-@import 'settings/variable';
 
 // TOOLS
-@import '../../node_modules/ed-grid/ed-grid';
 
 // GENERIC
-@import 'generic/normalize';
-@import 'generic/fonts';
+
+// @import 'generic/normalize';
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('~/assets/font/OpenSans.eot');
+  src: url('~/assets/font/OpenSans.eot?#iefix') format('embedded-opentype'),
+      url('~/assets/font/OpenSans.woff2') format('woff2'),
+      url('~/assets/font/OpenSans.woff') format('woff'),
+      url('~/assets/font/OpenSans.ttf') format('truetype'),
+      url('~/assets/font/OpenSans.svg#OpenSans-Regular') format('svg');
+}
 
 // ELEMENTS
 
 // OBJECTS
-@import 'objects/layout';
 
 // COMPONENTS
-@import 'components/typography';
-@import 'components/buttons';
-
+.lora{
+  font-family: Lora;
+}
 // UTILITIES
 

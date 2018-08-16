@@ -1,12 +1,13 @@
 {
   "name": "cecc",
-  "version": "1.0.0",
+  "version": "0.0.3.5",
   "description": "Pagina de la aplicacion cecc (Cultura Etica y Convivencia Ciudadana)",
   "author": "Sergio Antonio Trujillo <trujillo.sergio6@gmail.com>",
   "private": true,
   "license": "MIT",
   "dependencies": {
     "@nuxtjs/pwa": "latest",
+    "@nuxtjs/vuetify": "^0.4.2",
     "nuxt": "latest"
   },
   "scripts": {
@@ -21,6 +22,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
     "ed-grid": "^2.5.10",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
