@@ -33,7 +33,8 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    'nuxt-leaflet'
   ],
   /*
   **CSS
