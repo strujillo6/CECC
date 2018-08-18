@@ -1,21 +1,13 @@
 <template>
    <v-container
-    grid-list-md
-    tag="section"
-    class="ma-0 pa-0"
     fluid
+    class="nn ma-0 pa-0"
   >
-    <v-layout
-      column
-      fill-height
-      class=" ma-0 pa-0"
-    >
       <v-flex xl12
       class="pa-0"
       >
-        <v-parallax
-          dark
-          src="https://picsum.photos/450/700/?random"
+        <div
+          style=""
           class="hero"
         >
           <v-layout
@@ -30,16 +22,14 @@
               <h4 class="subheading">Comparte con otros lo que tu Localidad tiene para ti</h4>
             </v-layout>
           </v-layout>
-        </v-parallax>
+        </div>
       </v-flex>
 
       <v-flex xl12
-        fill-height
         class="pa-0"
       >
 
         <v-container
-
           grid-list-lg
         >
           <v-layout row wrap>
@@ -51,7 +41,7 @@
               <v-card>
                 <v-card-media
                   :src="card.src"
-                  height="255px"
+                  height="200px"
                 >
                   <v-container
                     fill-height
@@ -82,12 +72,7 @@
             </v-flex>
           </v-layout>
         </v-container>
-
-
-
-
       </v-flex>
-    </v-layout>
   </v-container>
 </template>
 <script>
@@ -97,6 +82,7 @@ export default {
     Cardactivity
   },
    data: () => ({
+      offsetTop: 0,
       cards: [
         { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
         { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex:4 },
@@ -106,14 +92,26 @@ export default {
         { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 4 }
       ]
     })
-
 }
 </script>
 
 <style>
+.nn{
+  min-height: 90vh;
+  height: 200px;
+  display: block;
+  overflow-y: auto;
+}
 .hero{
   position: relative;
-  min-height: 40vh;
+  background-image: url('https://picsum.photos/450/700/?random');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-size: cover;
+  height: 350px;
+  color: white;
 }
 .hero__content{
   position: absolute;
@@ -122,6 +120,19 @@ export default {
   left: 0;
   bottom: 0;
   background-color: rgba(48, 63, 159, 0.5);
+}
+@media (min-width: 1025px) {
+  /* .container__report{
+    margin-top: 65px;
+  }
+  .map{
+    width: calc(100% - 320px);
+  } */
+}
+@media (min-width: 601px) and (max-width: 959px) {
+  /* .container__report{
+    margin-top: 48px;
+  } */
 }
 </style>
 

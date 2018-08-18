@@ -1,11 +1,10 @@
 <template>
   <v-toolbar
-    fixed
     dark
     class="transparent"
     flat
   >
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-toolbar-title>{{title}}</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-xs-only">
@@ -17,7 +16,7 @@
   </v-toolbar>
 </template>
 <script>
-import Caruser from './card-user'
+import Caruser from './menu-user'
 export default {
   components: {Caruser},
   data: () =>({
