@@ -6,6 +6,22 @@
       "last-name": "Last Name Test",
       "email": "email@test.co",
       "phone": "300300300",
+      "": "Sr",
+      "edad":"",
+      "activity-favorites": [
+        {
+          "id":"1",
+          "title": "Activity Test",
+          "short_description": "short_description",
+          "date": "12/7/18"
+        },
+        {
+          "id":"2",
+          "title": "Activity Test 2",
+          "short_description": "short_description",
+          "date": "12/7/18"
+        }
+      ],
       "reports": [
         {
           "id":"1",
@@ -17,7 +33,7 @@
           "images": {},
           "description": "Hay un daño en el semaforo",
           "number": "4598728394",
-          "status":"open",
+          "status":"Abierto",
           "history": [
             {
               "id": "1",
