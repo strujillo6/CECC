@@ -1,9 +1,10 @@
 module.exports = {
+  mode: "spa",
   /*
   ** Headers of the page
   */
   head: {
-    title: 'test-nuxt',
+    title: 'cecc',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -31,6 +32,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      'axios'
+    ],
     /*
     ** Run ESLint on save
     */
