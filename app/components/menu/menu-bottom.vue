@@ -4,7 +4,7 @@
     absolute
     class="menu__bottom--hidden"
   >
-    <cmenu/>
+    <cmenu color="teal"/>
   </v-bottom-nav>
 </template>
 <script>

@@ -2,12 +2,12 @@
   <nav class="container__menu">
     <v-btn
       v-for="(item, index) in items" :key="index"
-      :color=color
       flat
       value="recent"
+      :color=color
       :to=item.link
     >
-      <span>{{item.title}}</span>
+      <span>{{item.title}} </span>
       <v-icon class="pl-1 pr-1">{{item.icon}}</v-icon>
     </v-btn>
   </nav>
@@ -15,7 +15,6 @@
 <script>
 export default {
   data: ()=>({
-    color:'',
     items:[
       {
         title: 'Actividades',
@@ -33,7 +32,13 @@ export default {
         icon: 'games'
       }
     ]
-  })
+  }),
+  props:{
+    color:{
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style>
