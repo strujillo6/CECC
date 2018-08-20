@@ -1,6 +1,5 @@
 <template>
-  <v-app class="green">
+  <v-app class="blue" dark>
     <nuxt/>
   </v-app>
 </template>
-

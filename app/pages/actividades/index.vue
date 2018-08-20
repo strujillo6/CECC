@@ -4,7 +4,7 @@
   </section>
 </template>
 <script>
-import Vmap from '../../components/report/map'
+import Vmap from '~/components/report/map'
 export default {
   components: {
     Vmap
