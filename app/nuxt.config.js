@@ -29,6 +29,22 @@ module.exports = {
     'nuxt-leaflet'
   ],
   /*
+  **
+  */
+  // Vuetify configuration
+  vuetify: {
+    theme: {
+      error: '#FF8A80',
+      primary: '#18FFFF'
+    }
+  },
+  /*
+  ** Css configuration
+  */
+  css: [
+    '@/assets/css/main.scss'
+  ],
+  /*
   ** Build configuration
   */
   build: {

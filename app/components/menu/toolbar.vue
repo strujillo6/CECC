@@ -7,18 +7,17 @@
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-toolbar-title>{{title}}</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-xs-only">
-      <v-btn flat to="actividades">Actividades</v-btn>
-      <v-btn flat to="reportes">Reportes</v-btn>
-      <v-btn flat to="juegos">Juegos</v-btn>
+    <v-toolbar-items class="menu__toolbar--hidden">
+      <cmenu/>
     </v-toolbar-items>
-    <caruser/>
+    <carduser/>
   </v-toolbar>
 </template>
 <script>
-import Caruser from './menu-user'
+import Carduser from './menu-user'
+import Cmenu from './menu-links'
 export default {
-  components: {Caruser},
+  components: {Carduser, Cmenu},
   data: () =>({
     title: "CECC"
   }),
@@ -27,3 +26,12 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+@import '@/assets/css/main.scss';
+.menu__toolbar--hidden{
+  display: none;
+  @include breakpoint(tablet){
+    display: inline;
+  }
+}
+</style>

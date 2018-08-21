@@ -1,0 +1,27 @@
+// SETTINGS
+@import './variable/var.scss';
+// TOOLS
+@import './tools/mixin.scss';
+@import './tools/function.scss';
+// GENERIC
+.main__container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100% - 112px);
+  @include breakpoint(phablet){
+    height: calc(100% - 104px);
+  }
+  @include breakpoint(tablet){
+    height: 100%;
+  }
+}
+// ELEMENTS
+
+// OBJECTS
+
+// COMPONENTS

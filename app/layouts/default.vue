@@ -1,13 +1,14 @@
 <template>
   <v-app class="indigo darken-2">
     <toolbar/>
-    <nuxt/>
+     <nuxt/>
+    <btoolbar/>
   </v-app>
 </template>
 <script>
-import Toolbar from '~/components/header/toolbar.vue'
+import Toolbar from '~/components/menu/toolbar.vue'
+import Btoolbar from '~/components/menu/menu-bottom.vue'
 export default {
-  components: {Toolbar}
+  components: {Toolbar, Btoolbar}
 }
 </script>
-
