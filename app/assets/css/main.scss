@@ -4,6 +4,9 @@
 @import './tools/mixin.scss';
 @import './tools/function.scss';
 // GENERIC
+html{
+  overflow: hidden;
+}
 .main__container{
   display: flex;
   flex-direction: row;

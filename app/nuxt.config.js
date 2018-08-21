@@ -29,9 +29,8 @@ module.exports = {
     'nuxt-leaflet'
   ],
   /*
-  **
+  **Vuetify configuration
   */
-  // Vuetify configuration
   vuetify: {
     theme: {
       error: '#FF8A80',

@@ -14,6 +14,11 @@
     </l-map>
   </div>
 </template>
+<script>
+export default {
+}
+</script>
+
 <style>
 .container__map{
   z-index: 1;
