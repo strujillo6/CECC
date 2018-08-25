@@ -1,5 +1,8 @@
 <template>
   <form class="form" >
+    <div class="logo">
+      <img src="../../assets/img/logo.svg" alt="">
+    </div>
     <v-text-field
       v-validate="'required|email'"
       v-model="email"
@@ -8,15 +11,6 @@
       data-vv-name="email"
       required
     ></v-text-field>
-    <!-- <v-text-field
-      v-validate="'required|max:10'"
-      v-model="name"
-      :counter="10"
-      :error-messages="errors.collect('name')"
-      label="Name"
-      data-vv-name="name"
-      required
-    ></v-text-field> -->
     <v-text-field
       v-validate="'required'"
       v-model="password"
@@ -24,13 +18,15 @@
       label="Contraseña"
       data-vv-name="password"
       required
+      type='password'
     >
     </v-text-field>
     <!-- <v-btn flat @click="submit">Registrarse</v-btn> -->
-    <v-btn class="teal" @click="clear">{{textSubmit}}</v-btn>
+    <v-btn class="indigo" @click="login()" dark>{{textSubmit}}</v-btn>
+    <!-- <v-btn class="indigo" @click="$router.push('/')" dark>{{textSubmit}}</v-btn> -->
     <div class="actions">
-      <nuxt-link to="/login/registro"  class="pa-3">Registrarse</nuxt-link>
-      <nuxt-link to="/" class="pa-3">Recuperar contraseña</nuxt-link>
+      <nuxt-link to=""  class="pa-3">Registrarse</nuxt-link>
+      <nuxt-link to="" class="pa-3">Recuperar contraseña</nuxt-link>
     </div>
   </form>
 </template>
@@ -57,13 +53,13 @@
       checkbox: null,
       dictionary: {
         custom: {
-          name: {
-            required: () => 'Name can not be empty',
-            max: 'The name field may not be greater than 10 characters'
+          email: {
+            required: () => 'El campo de E-mail es requerido',
+            email: 'Deber ser un E-mail valido como: example@test.co'
             // custom messages
           },
-          select: {
-            required: 'Select field is required'
+          password: {
+            required: () => 'El campo de Contraseña es Obligatorio'
           }
         }
       }
@@ -77,13 +73,16 @@
       submit () {
         this.$validator.validateAll()
       },
-      clear () {
-        this.name = ''
-        this.email = ''
-        this.select = null
-        this.checkbox = null
-        this.$validator.reset()
+      login (redirect){
+        this.$router.push('/')
       }
+      // clear () {
+      //   this.name = ''
+      //   this.email = ''
+      //   this.select = null
+      //   this.checkbox = null
+      //   this.$validator.reset()
+      // }
     }
   }
 </script>
@@ -91,5 +90,8 @@
 .actions{
   margin-top: 20px;
   text-align: center;
+}
+.logo{
+  padding-bottom: 20px;
 }
 </style>
