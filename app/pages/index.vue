@@ -1,5 +1,5 @@
 <template>
-  <section class="main__container">
+  <section>
     <div class="index__img pa-3">
       <img class="index__img__content" src="~/assets/img/team.svg" alt="">
     </div>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '@/assets/css/main.scss';
+@import '~/assets/css/tools/_mixin.scss';
 .index{
   &__img{
     width: 100%;
