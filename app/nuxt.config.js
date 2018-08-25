@@ -26,6 +26,7 @@ module.exports = {
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
     '@nuxtjs/vuetify',
+    // ['@nuxtjs/localtunnel', { subdomain: 'cecc' }],
     'nuxt-leaflet'
   ],
   /*
@@ -34,7 +35,7 @@ module.exports = {
   vuetify: {
     theme: {
       error: '#FF8A80',
-      primary: '#18FFFF'
+      primary: '#3f51b5'
     }
   },
   /*
