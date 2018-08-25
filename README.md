@@ -10,7 +10,7 @@ _____________________________
 2. [Wireframe "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 3. [Mockup "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 4. [Logo](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Logo)
-5. [Modelo Casos de Uso](https://github.com/strujillo6/CECC/blob/master/Documentaci%C3%B3n/CECC%20Casos%20de%20uso.docx)
+5. [Documentación](https://github.com/strujillo6/CECC/blob/master/Documentaci%C3%B3n)
 
 _____________________________
 
