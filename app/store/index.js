@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import moduleLocation from './location/index'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -12,6 +13,9 @@ const createStore = () => {
       decrement (state) {
         state.counter--
       }
+    },
+    modules: {
+      location: moduleLocation
     }
   })
 }
