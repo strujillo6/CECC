@@ -3,9 +3,8 @@
     <v-btn
       v-for="(item, index) in items" :key="index"
       flat
-      value="recent"
-      :color=color
       :to=item.link
+      dark
     >
       <span>{{item.title}} </span>
       <v-icon class="pl-1 pr-1">{{item.icon}}</v-icon>
@@ -18,17 +17,17 @@ export default {
     items:[
       {
         title: 'Actividades',
-        link: 'actividades',
+        link: '/actividades',
         icon:'directions_bike'
       },
       {
         title: 'Reportes',
-        link: 'reportes',
+        link: '/reportes',
         icon: 'report'
       },
       {
         title: 'Juegos',
-        link: 'juegos',
+        link: '/',
         icon: 'games'
       }
     ]

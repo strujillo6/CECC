@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '@/assets/css/main.scss';
+@import '~/assets/css/tools/_mixin.scss';
 .menu__toolbar--hidden{
   display: none;
   @include breakpoint(tablet){
