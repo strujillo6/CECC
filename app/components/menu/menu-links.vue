@@ -26,9 +26,9 @@ export default {
         icon: 'report'
       },
       {
-        title: 'Juegos',
+        title: 'Conoceme',
         link: '/',
-        icon: 'games'
+        icon: 'bookmarks'
       }
     ]
   }),
