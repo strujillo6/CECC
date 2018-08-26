@@ -10,9 +10,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    link: [
-      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [ ]
   },
   /*
   ** Customize the progress bar color
@@ -27,7 +25,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/vuetify',
     // ['@nuxtjs/localtunnel', { subdomain: 'cecc' }],
-    'nuxt-leaflet'
+    // ['nuxt-leaflet', {ssr: false}]
   ],
   /*
   **Vuetify configuration
@@ -42,8 +40,13 @@ module.exports = {
   ** Css configuration
   */
   css: [
-    '@/assets/css/main.scss'
+    '@/assets/css/main.scss',
+    './node_modules/leaflet/dist/leaflet.css'
   ],
+  /*
+  ** Plugings
+  */
+  // plugins: {  },
   /*
   ** Build configuration
   */
