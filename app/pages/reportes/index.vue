@@ -1,10 +1,9 @@
 <template>
   <section>
-    <cecc-menu v-on:show="showMenu" :icon="iconMenu"/>
+    <cecc-menu @show="showMenu" :icon="iconMenu" @geolocation="setGeolocation"/>
     <cecc-map :locale="location"/> 
     <aside class="menu__report" :class="{ showMenu: active }">
       <cecc-filter/>
-      {{error}}
       <cecc-list/>
     </aside>
     <div class="form__report">
@@ -16,11 +15,13 @@
       dark
       absolute
       right
-      class="btn__report "
-      :class="{ btn__reportCenter: formActive }"
-    >
-      <v-icon>add </v-icon> 
-      <span>Guardar</span>      
+      class="btn__report elevation-6"
+      :class="{ btn__reportCenter: !active }"
+      :ripple="false"
+    > 
+      <v-icon>add</v-icon>
+      <span>Guardar</span>
+            
     </v-btn>
   </section>
 </template>
@@ -35,7 +36,7 @@ export default {
     'cecc-map': Map,
     'cecc-menu': Menu,
     'cecc-list': List,
-    'cecc-filter': Filter
+    'cecc-filter': Filter,
   },
   data: ()=> ({
     active: true,
@@ -44,20 +45,17 @@ export default {
   }),
   computed:
   {
-    // location: function () {
-    //   return this.$store.state.location.location
-    //   // return this.$store.getters['location/location']
-    // },
-    // error: function () {
-    //   return this.$store.getters['location/error']
-    // },
     ...mapState({
       location: state => state.location.location,
       error: state => state.location.error
     })
   },
   methods: {
-    showMenu: function (){
+    setGeolocation() {      
+      this.$store.commit('location/updateLocation', "")
+      this.$store.dispatch('location/geolocale')
+    },
+    showMenu() {
        if(this.active == true){
          this.active =false;
          this.iconMenu = 'close'
@@ -67,42 +65,7 @@ export default {
        }
     }
   },
-  fetch ({store}) {
-    if (navigator.geolocation) {
-      // navigator.geolocation.watchPosition(showPosition, showError)
-      return navigator.geolocation.getCurrentPosition(showPosition, showError)
-    } else {
-      error.msg = 'la geolocalización NO está disponible en su Dispositivo'
-      error.active = false
-      console.log(error)
-      store.commit('location/error', error)
-    }
-    function showPosition(position) {
-      location.latitude=position.coords.latitude
-      location.longitude= position.coords.longitude
-      store.commit('location/updateLocation', location)
-    }
-
-    function showError(error) {
-      switch(error.code) {
-        case error.PERMISSION_DENIED:
-          error.msg = "No hay permiso para Geolocalización."
-          break;
-        case error.POSITION_UNAVAILABLE:
-          error.msg = "La información para tu localización actual, no está disponible."
-          break;
-        case error.TIMEOUT:
-          error.msg = "Se ha tardado mucho en conocer la ubicación actual."
-          break;
-        case error.UNKNOWN_ERROR:
-          error.msg = "A ocurrido un error inesperado."
-          break;
-      }
-      error.active = false
-      console.log(error)
-      store.commit('location/error', error)
-    }
-  }
+  // middleware: 'location'
 }
 </script>
 <style lang="scss">
@@ -129,11 +92,11 @@ export default {
 }
 .form__report{
   position: absolute;
-  height: 10px;
+  height: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: red;
+  // transform: scale(3);
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -143,22 +106,34 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:80%;
+    min-height: 400px;
+    min-width: 400px;
     width: 800px;
-    background-color: white;
+    height:800px;
+    background-color: indigo;
     border-radius: 50%;
     transform: scale(1);
   }
 }
+.nn{
+  width: 140px!important;
+  border-radius: 36px!important;
+
+}
 .btn__report{
   transition: all .85s ease-in-out;
-  border-radius: 28px;
+  border-radius: 36px;
   height: 56px;
-  width: auto;
-  min-width: 56px;
+  width: 56px;
+  min-width: 28px;
   bottom: 16px;
   margin-right: 16px;
   background-color: teal;
+  @include breakpoint(tablet){
+    height: 72px;
+    width: 72px;
+    min-width: 72px;
+  }
   z-index: 10;
   & span{
     width: 0;
@@ -167,6 +142,7 @@ export default {
   }
   &Center{
     transform: translateX( calc(-50vw + 87px));
+    width: 140px;
     & span{
       width: 70px;
     }

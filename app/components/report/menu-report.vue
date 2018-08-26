@@ -4,17 +4,28 @@
       floating
       class="search__map"
     >
-      <v-text-field
+      <!-- <v-text-field
         hide-details
         prepend-icon="search"
         single-line
-      ></v-text-field>
+        label="No. de radicado"
+      ></v-text-field> -->
 
-      <v-btn icon>
+    <v-autocomplete
+      single-line
+      v-model="model"
+      :items="states"
+      prepend-icon="search"
+    >
+        
+    </v-autocomplete>
+
+
+      <v-btn icon @click="geolocation">
         <v-icon>my_location</v-icon>
       </v-btn>
 
-      <v-btn icon v-on:click="show">
+      <v-btn icon @click="show">
         <v-icon>{{icon}}</v-icon>
       </v-btn>
     </v-toolbar> 
@@ -27,10 +38,32 @@ export default {
         }
     },
     methods: {
-        show: function () {
-            this.$emit('show')
+        show () {
+          this.$emit('show')
+        },
+        geolocation () {
+          this.$emit('geolocation')
         }
-    }
+    },
+    data: () => ({
+      model: null,
+      states: [
+        'Alabama', 'Alaska', 'American Samoa', 'Arizona',
+        'Arkansas', 'California', 'Colorado', 'Connecticut',
+        'Delaware', 'District of Columbia', 'Federated States of Micronesia',
+        'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
+        'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+        'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
+        'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+        'Missouri', 'Montana', 'Nebraska', 'Nevada',
+        'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
+        'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
+        'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
+        'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
+        'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
+        'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+      ]
+    })
 }
 </script>
 <style lang="scss">
@@ -47,5 +80,11 @@ export default {
   @include breakpoint(phablet){
     left: 8px;
   }
+}
+.v-autocomplete{
+  padding-top: 16px;
+}
+.v-select-list, .v-card{
+  width: 210px;
 }
 </style>
