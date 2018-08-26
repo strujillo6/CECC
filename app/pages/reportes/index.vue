@@ -6,7 +6,7 @@
       <cecc-filter/>
       <cecc-list/>
     </aside>
-    <div class="form__report">
+    <div class="form__report" :class="{ form__reportActive: formActiveSave }">
       <div class="form__report__content">
       </div> 
     </div>
@@ -16,8 +16,10 @@
       absolute
       right
       class="btn__report elevation-6"
-      :class="{ btn__reportCenter: !active }"
+      :class="{ btn__reportCenter: formActiveSave }"
       :ripple="false"
+
+      @click="formActive"
     > 
       <v-icon>add</v-icon>
       <span>Guardar</span>
@@ -40,7 +42,7 @@ export default {
   },
   data: ()=> ({
     active: true,
-    formActive: false,
+    formActiveSave: false,
     iconMenu: 'menu'
   }),
   computed:
@@ -63,6 +65,13 @@ export default {
          this.active =true;
          this.iconMenu = 'menu'
        }
+    },
+    formActive(){
+      if(this.formActiveSave == false){
+        this.formActiveSave = true
+      }else{
+        this.formActiveSave = false
+      }
     }
   },
   // middleware: 'location'
@@ -102,6 +111,13 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: all .5s ease;
+  &Active{
+    height: 100%;
+    & .form__report__content{
+      transform: scale(3);
+    }
+  }
   &__content{
     display: flex;
     justify-content: center;
@@ -110,16 +126,14 @@ export default {
     min-width: 400px;
     width: 800px;
     height:800px;
-    background-color: indigo;
+    background-color: white;
     border-radius: 50%;
-    transform: scale(1);
+    transform: scale(0);
+    transition: all .5s ease-in;
+    transition-delay: .5s;
   }
 }
-.nn{
-  width: 140px!important;
-  border-radius: 36px!important;
 
-}
 .btn__report{
   transition: all .85s ease-in-out;
   border-radius: 36px;

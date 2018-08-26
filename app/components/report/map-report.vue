@@ -52,7 +52,7 @@ export default {
     icon () {
       return L.icon({
         // iconUrl: "https://image.flaticon.com/icons/svg/143/143960.svg",
-        iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
+        iconUrl: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9%0D%0AImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5v%0D%0AcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM4IDk0IiBzdHls%0D%0AZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOCA5NDsiIHhtbDpzcGFjZT0icHJlc2VydmUi%0D%0APgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwMDk2ODg7fQoJLnN0MXtmaWxs%0D%0AOiNFQkJBMTY7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTksNzRDOC41LDc0LDAs%0D%0ANzguNSwwLDg0YzAsNS41LDguNSwxMCwxOSwxMHMxOS00LjUsMTktMTBDMzgsNzguNSwyOS41LDc0%0D%0ALDE5LDc0eiBNMTksOTAKCWMtNi44LDAtMTIuMy0yLjktMTIuMy02LjVTMTIuMiw3NywxOSw3N3Mx%0D%0AMi4zLDIuOSwxMi4zLDYuNVMyNS44LDkwLDE5LDkweiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJN%0D%0AMzIuNCw2LjhjLTcuNC05LTE5LjQtOS0yNi45LDBjLTYuNyw4LjEtNy40LDIzLjQtMS44LDMyLjZM%0D%0AMTksNjZsMTUuMi0yNi43QzM5LjksMzAuMiwzOS4xLDE0LjksMzIuNCw2Ljh6CgkgTTE5LDM1Yy02%0D%0ALjYsMC0xMi01LjQtMTItMTJjMC02LjYsNS40LTEyLDEyLTEyczEyLDUuNCwxMiwxMkMzMSwyOS42%0D%0ALDI1LjYsMzUsMTksMzV6Ii8+Cjwvc3ZnPgo=",
         iconSize: [38, 95],
         iconAnchor: [22, 94],
       })
@@ -68,7 +68,6 @@ export default {
   }
 }
 </script>
-
 <style>
 .leaflet-control-zoom{
   top: 60px;

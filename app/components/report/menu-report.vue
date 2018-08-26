@@ -16,6 +16,7 @@
       v-model="model"
       :items="states"
       prepend-icon="search"
+      class="autocomplete__search__report"
     >
         
     </v-autocomplete>
@@ -81,10 +82,10 @@ export default {
     left: 8px;
   }
 }
-.v-autocomplete{
+.autocomplete__search__report{
   padding-top: 16px;
 }
-.v-select-list, .v-card{
-  width: 210px;
+.v-autocomplete__content.v-menu__content{
+  width: 210px!important;
 }
 </style>
