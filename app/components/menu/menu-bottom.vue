@@ -1,7 +1,6 @@
 <template>
   <v-bottom-nav
     :value="true"
-    absolute
     class="menu__bottom--hidden"
     :active.sync="bottomNav"
     color="teal"

@@ -10,7 +10,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    link: [ ]
+    link: []
   },
   /*
   ** Customize the progress bar color
@@ -43,6 +43,17 @@ module.exports = {
     '@/assets/css/main.scss',
     './node_modules/leaflet/dist/leaflet.css'
   ],
+  axios: {
+    baseURL: 'https://stark-brushlands-17142.herokuapp.com/'
+  },
+
+  auth: {
+    // endpoints: {
+    //   login:  { url: '/users' },
+    //   logout: false,
+    //   user:   { url: '/users/current' }
+    // }
+  },
   /*
   ** Plugings
   */

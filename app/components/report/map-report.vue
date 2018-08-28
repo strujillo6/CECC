@@ -1,14 +1,14 @@
 <template>
   <div class="container__map">
-    <l-map  :zoom=16 :center="[locale.latitude, locale.longitude]">
-      <!-- <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer> -->
-      <l-tile-layer url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}" 
+    <l-map  :zoom="16" :center="[locale.latitude, locale.longitude]" @click="clicka">
+      <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+      <!-- <l-tile-layer url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}"
                     token='pk.eyJ1Ijoic3RydWppbGxvNiIsImEiOiJjamw0MXhtZnEwMmI3M3Jxa2hvNzl1ZnZyIn0.dXbn4cof6WclKi4oC94mcw'
                     :options="{
-                      id: 'mapbox.streets', 
+                      id: 'mapbox.streets',
                       attribution:'Imagery © <a href=´https://www.mapbox.com/´>Mapbox</a>'
-                      }"                                      
-                    />
+                      }"
+                    /> -->
       <l-marker :lat-lng="[locale.latitude, locale.longitude]" :icon="icon">
         <l-popup>
           Contenido
@@ -23,11 +23,11 @@
 </template>
 <script>
 
-import { 
-  LMap, 
-  LTileLayer, 
-  LMarker, 
-  LPopup, 
+import {
+  LMap,
+  LTileLayer,
+  LMarker,
+  LPopup,
   LControlScale
   } from 'vue2-leaflet';
 
@@ -41,18 +41,18 @@ L.Icon.Default.mergeOptions({
 
 export default {
   components:{
-    LMap, 
-    LTileLayer, 
+    LMap,
+    LTileLayer,
     LMarker,
     LPopup,
     LControlScale
   },
-  
+
   computed:{
     icon () {
       return L.icon({
         // iconUrl: "https://image.flaticon.com/icons/svg/143/143960.svg",
-        iconUrl: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9%0D%0AImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5v%0D%0AcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM4IDk0IiBzdHls%0D%0AZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOCA5NDsiIHhtbDpzcGFjZT0icHJlc2VydmUi%0D%0APgo8cGF0aCBmaWxsPSIjRUJCQTE2IiA+CiAgPGFuaW1hdGUgCiAgICAgICAgICAgYXR0cmlidXRl%0D%0ATmFtZT0iZCIKICAgICAgICAgICBmcm9tPSJNMTksNzRDOC41LDc0LDAsNzguNSwwLDg0YzAsNS41%0D%0ALDguNSwxMCwxOSwxMHMxOS00LjUsMTktMTBDMzgsNzguNSwyOS41LDc0LDE5LDc0eiBNMTksOTAK%0D%0ACWMtNi44LDAtMTIuMy0yLjktMTIuMy02LjVTMTIuMiw3NywxOSw3N3MxMi4zLDIuOSwxMi4zLDYu%0D%0ANVMyNS44LDkwLDE5LDkwIgogICAgICAgICAgIHRvPSJNMTksNzcuN2MtNi42LDAtMTIsMi44LTEy%0D%0ALDYuM2MwLDMuNSw1LjQsNi4zLDEyLDYuM3MxMi0yLjgsMTItNi4zQzMxLDgwLjUsMjUuNiw3Ny43%0D%0ALDE5LDc3Ljd6IE0xOSw4Ny44CgljLTQuMywwLTcuOC0xLjgtNy44LTQuMWMwLTIuMywzLjUtNC4x%0D%0ALDcuOC00LjFzNy44LDEuOCw3LjgsNC4xQzI2LjgsODYsMjMuMyw4Ny44LDE5LDg3Ljh6IiAKICAg%0D%0AICAgICAgICBkdXI9Ii45cyIKICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIKICAg%0D%0AICAgICAgICAvPgogIDwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRUJCQTE2Ij4KICAgIDxhbmltYXRl%0D%0AIAogICAgICAgICAgIGF0dHJpYnV0ZU5hbWU9ImQiCiAgICAgICAgICAgZnJvbT0iTTMyLjQsNi44%0D%0AYy03LjQtOS0xOS40LTktMjYuOSwwYy02LjcsOC4xLTcuNCwyMy40LTEuOCwzMi42TDE5LDY2bDE1%0D%0ALjItMjYuN0MzOS45LDMwLjIsMzkuMSwxNC45LDMyLjQsNi44egoJIE0xOSwzNWMtNi42LDAtMTIt%0D%0ANS40LTEyLTEyYzAtNi42LDUuNC0xMiwxMi0xMnMxMiw1LjQsMTIsMTJDMzEsMjkuNiwyNS42LDM1%0D%0ALDE5LDM1eiIKICAgICAgICAgICB0bz0iTTMxLjgsMjEuNGMtNy4xLTguNi0xOC42LTguNi0yNS42%0D%0ALDBjLTYuNCw3LjctNy4xLDIyLjMtMS43LDMxLjFMMTksNzhsMTQuNS0yNS40CglDMzguOSw0My44%0D%0ALDM4LjIsMjkuMiwzMS44LDIxLjR6IE0xOSw0OC40Yy00LjUsMC04LjItMy43LTguMi04LjJjMC00%0D%0ALjUsMy43LTguMiw4LjItOC4yczguMiwzLjcsOC4yLDguMgoJQzI3LjIsNDQuNywyMy41LDQ4LjQs%0D%0AMTksNDguNHoiIAogICAgICAgICAgIGR1cj0iLjZzIgogICAgICAgICAgIHJlcGVhdENvdW50PSJp%0D%0AbmRlZmluaXRlIgogICAgICAgICAgIC8+CiAgPC9wYXRoPgo8L3N2Zz4K",
+        iconUrl: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9%0D%0AImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5v%0D%0AcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDM4IDk0IiBzdHls%0D%0AZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOCA5NDsiIHhtbDpzcGFjZT0icHJlc2VydmUi%0D%0APgo8cGF0aCBmaWxsPSIjMzAzRjlGIiA+CiAgPGFuaW1hdGUgCiAgICAgICAgICAgYXR0cmlidXRl%0D%0ATmFtZT0iZCIKICAgICAgICAgICBmcm9tPSJNMTksNzRDOC41LDc0LDAsNzguNSwwLDg0YzAsNS41%0D%0ALDguNSwxMCwxOSwxMHMxOS00LjUsMTktMTBDMzgsNzguNSwyOS41LDc0LDE5LDc0eiBNMTksOTAK%0D%0ACWMtNi44LDAtMTIuMy0yLjktMTIuMy02LjVTMTIuMiw3NywxOSw3N3MxMi4zLDIuOSwxMi4zLDYu%0D%0ANVMyNS44LDkwLDE5LDkwIgogICAgICAgICAgIHRvPSJNMTksNzcuN2MtNi42LDAtMTIsMi44LTEy%0D%0ALDYuM2MwLDMuNSw1LjQsNi4zLDEyLDYuM3MxMi0yLjgsMTItNi4zQzMxLDgwLjUsMjUuNiw3Ny43%0D%0ALDE5LDc3Ljd6IE0xOSw4Ny44CgljLTQuMywwLTcuOC0xLjgtNy44LTQuMWMwLTIuMywzLjUtNC4x%0D%0ALDcuOC00LjFzNy44LDEuOCw3LjgsNC4xQzI2LjgsODYsMjMuMyw4Ny44LDE5LDg3Ljh6IiAKICAg%0D%0AICAgICAgICBkdXI9Ii45cyIKICAgICAgICAgICByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIKICAg%0D%0AICAgICAgICAvPgogIDwvcGF0aD4KICA8cGF0aCBmaWxsPSIjMzAzRjlGIj4KICAgIDxhbmltYXRl%0D%0AIAogICAgICAgICAgIGF0dHJpYnV0ZU5hbWU9ImQiCiAgICAgICAgICAgZnJvbT0iTTMyLjQsNi44%0D%0AYy03LjQtOS0xOS40LTktMjYuOSwwYy02LjcsOC4xLTcuNCwyMy40LTEuOCwzMi42TDE5LDY2bDE1%0D%0ALjItMjYuN0MzOS45LDMwLjIsMzkuMSwxNC45LDMyLjQsNi44egoJIE0xOSwzNWMtNi42LDAtMTIt%0D%0ANS40LTEyLTEyYzAtNi42LDUuNC0xMiwxMi0xMnMxMiw1LjQsMTIsMTJDMzEsMjkuNiwyNS42LDM1%0D%0ALDE5LDM1eiIKICAgICAgICAgICB0bz0iTTMxLjgsMjEuNGMtNy4xLTguNi0xOC42LTguNi0yNS42%0D%0ALDBjLTYuNCw3LjctNy4xLDIyLjMtMS43LDMxLjFMMTksNzhsMTQuNS0yNS40CglDMzguOSw0My44%0D%0ALDM4LjIsMjkuMiwzMS44LDIxLjR6IE0xOSw0OC40Yy00LjUsMC04LjItMy43LTguMi04LjJjMC00%0D%0ALjUsMy43LTguMiw4LjItOC4yczguMiwzLjcsOC4yLDguMgoJQzI3LjIsNDQuNywyMy41LDQ4LjQs%0D%0AMTksNDguNHoiIAogICAgICAgICAgIGR1cj0iLjZzIgogICAgICAgICAgIHJlcGVhdENvdW50PSJp%0D%0AbmRlZmluaXRlIgogICAgICAgICAgIC8+CiAgPC9wYXRoPgo8L3N2Zz4K",
         iconSize: [38, 95],
         iconAnchor: [22, 94],
       })
@@ -64,6 +64,12 @@ export default {
     },
     marker:{
       type: Object
+    }
+  },
+  methods:{
+    clicka(e){
+        // .openOn(map);
+        console.log(e)
     }
   }
 }

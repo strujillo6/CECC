@@ -1,28 +1,51 @@
 <template>
   <v-toolbar
-    dark
-    class="transparent"
+    :dark="dark"
+    :color="color"
     flat
   >
-    <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
+    <v-btn flat icon v-if="!menu">
+      <v-icon>navigate_before</v-icon>
+    </v-btn>
+    <div class="logo">
+      <img src="../../assets/img/logo-flat.svg" alt="Logo de Cultura Etica y Convivencia Ciudadana">
+    </div>
     <v-toolbar-title>{{title}}</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="menu__toolbar--hidden">
-      <cmenu/>
+    
+    <v-toolbar-items class="menu__toolbar--hidden" v-if="menu">
+      <cecc-menu/>
     </v-toolbar-items>
-    <carduser/>
+    <cecc-card-user v-if="menu"/>
+    <v-btn flat icon v-if="!menu">
+      <v-icon>close</v-icon>
+    </v-btn>
   </v-toolbar>
 </template>
 <script>
 import Carduser from './menu-user'
 import Cmenu from './menu-links'
 export default {
-  components: {Carduser, Cmenu},
-  data: () =>({
-    title: "CECC"
-  }),
+  components: {
+    'cecc-card-user':Carduser, 
+    'cecc-menu': Cmenu
+  },
   props: {
-
+    menu: {
+      type: Boolean,
+      default: true
+    },
+    title:{
+      type:String
+    },
+    color:{
+      type:String,
+      default:"transparent"
+    },
+    dark:{
+      type:Boolean,
+      default: true
+    }
   }
 }
 </script>
@@ -32,6 +55,12 @@ export default {
   display: none;
   @include breakpoint(tablet){
     display: inline;
+  }
+}
+.logo{
+  height: 30px;
+  & img{
+    height: 100%;
   }
 }
 </style>

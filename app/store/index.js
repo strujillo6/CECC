@@ -4,14 +4,14 @@ import moduleLocation from './location/index'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      counter: 0
+      formReportActive: false
     },
     mutations: {
-      increment (state) {
-        state.counter++
+      active (state) {
+        state.formReportActive = false
       },
-      decrement (state) {
-        state.counter--
+      inactive (state) {
+        state.formReportActive = true
       }
     },
     modules: {

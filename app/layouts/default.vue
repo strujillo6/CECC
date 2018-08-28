@@ -1,23 +1,43 @@
 <template>
   <v-app class="indigo darken-2">
-    <div >
-      <top-toolbar class="z__index-10 menu-top"/>
+    <div class="toolbar__top">
+      <top-toolbar
+        :title="title"
+        class="z__index-10"
+      />
+      <top-toolbar
+        class="z__index-10 toolbar__auxiliar"
+        color="white"
+        :menu='false'
+        :dark='false'
+        :class="{formActiveMenu: formReportActive}"
+      />
     </div>
     <div class="content">
       <nuxt class="main__container"/>
     </div>
-    <div>
-       <bottom-toolbar class="z__index-10"/> 
+    <div class="toolbar__bottom" :class="{formActiveBottom: formReportActive}">
+       <bottom-toolbar class="z__index-10"/>
     </div>
   </v-app>
 </template>
 <script>
 import Toolbar from '~/components/menu/toolbar.vue'
 import Btoolbar from '~/components/menu/menu-bottom.vue'
+import { mapState } from 'vuex'
 export default {
   components: {
-    'top-toolbar':    Toolbar, 
+    'top-toolbar':    Toolbar,
     'bottom-toolbar': Btoolbar
+    },
+    data: () => ({
+      title: "Actividades Culturales"
+    }),
+    computed:
+    {
+      ...mapState({
+        formReportActive: state => state.formReportActive
+      })
     }
 }
 </script>
@@ -33,7 +53,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-
 .application--wrap{
   display: flex;
   min-height: 100vh;
@@ -51,10 +70,41 @@ export default {
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
-   width: 100%;
-  padding-bottom: 56px;
-  @include breakpoint(tablet){
-    padding-bottom: 0;
+  width: 100%;
+}
+.toolbar{
+  &__auxiliar{
+    transition: transform .5s ease!important;
+    transition-delay: .5s!important;
+    height: 105%;
+  }
+  &__top,
+  &__bottom{
+    overflow: hidden;
+    transition: all .5s ease-in;
+  }
+  &__top{
+    height: 55.4px;
+    @include breakpoint(toolbarM){
+      height: 47.4px;
+    }
+    @include breakpoint(toolbarL){
+      height: 63.4px;
+    }
+  }
+  &__bottom{
+    height: 56px;
+    @include breakpoint(tablet){
+      height: 0;
+    }
+  }
+}
+.formActive{
+  &Menu{
+    transform: translateY(-100%)!important;
+  }
+  &Bottom{
+    height: 0;
   }
 }
 </style>

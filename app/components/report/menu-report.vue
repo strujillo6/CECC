@@ -4,24 +4,14 @@
       floating
       class="search__map"
     >
-      <!-- <v-text-field
-        hide-details
-        prepend-icon="search"
+      <v-autocomplete
         single-line
-        label="No. de radicado"
-      ></v-text-field> -->
-
-    <v-autocomplete
-      single-line
-      v-model="model"
-      :items="states"
-      prepend-icon="search"
-      class="autocomplete__search__report"
-    >
-        
-    </v-autocomplete>
-
-
+        v-model="model"
+        :items="states"
+        prepend-icon="search"
+        class="autocomplete__search__report"
+        placeholder="No. de radicado"
+      />
       <v-btn icon @click="geolocation">
         <v-icon>my_location</v-icon>
       </v-btn>

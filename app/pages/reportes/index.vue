@@ -1,14 +1,16 @@
 <template>
   <section>
     <cecc-menu @show="showMenu" :icon="iconMenu" @geolocation="setGeolocation"/>
-    <cecc-map :locale="location"/> 
+    <cecc-map :locale="location" />
     <aside class="menu__report" :class="{ showMenu: active }">
       <cecc-filter/>
       <cecc-list/>
     </aside>
     <div class="form__report" :class="{ form__reportActive: formActiveSave }">
-      <div class="form__report__content">
-      </div> 
+      <div class="form__report__animate"/>
+      <form class="form__report__content">
+        <cecc-form />
+      </form>
     </div>
     <v-btn
       flat
@@ -20,10 +22,10 @@
       :ripple="false"
 
       @click="formActive"
-    > 
+    >
       <v-icon>add</v-icon>
       <span>Guardar</span>
-            
+
     </v-btn>
   </section>
 </template>
@@ -32,13 +34,15 @@ import Menu from '~/components/report/menu-report'
 import Map from '~/components/report/map-report'
 import List from '~/components/report/list-report'
 import Filter from '~/components/report/filter-report'
-import { mapState } from 'vuex'
+import Form from '../../components/forms/form-report'
+import { mapState,  mapMutations  } from 'vuex'
 export default {
   components: {
     'cecc-map': Map,
     'cecc-menu': Menu,
     'cecc-list': List,
     'cecc-filter': Filter,
+    'cecc-form': Form,
   },
   data: ()=> ({
     active: true,
@@ -53,7 +57,7 @@ export default {
     })
   },
   methods: {
-    setGeolocation() {      
+    setGeolocation() {
       this.$store.commit('location/updateLocation', "")
       this.$store.dispatch('location/geolocale')
     },
@@ -69,12 +73,15 @@ export default {
     formActive(){
       if(this.formActiveSave == false){
         this.formActiveSave = true
+        this.add()
       }else{
         this.formActiveSave = false
+        this.remove()
       }
-    }
+    },
+    ...mapMutations({ remove:'active', add:'inactive'})
   },
-  // middleware: 'location'
+  middleware: 'location'
 }
 </script>
 <style lang="scss">
@@ -105,7 +112,6 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  // transform: scale(3);
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -114,26 +120,35 @@ export default {
   transition: all .5s ease;
   &Active{
     height: 100%;
+    & .form__report__animate{
+      transform: scale(30);
+    }
     & .form__report__content{
-      transform: scale(3);
+      opacity: 1;
     }
   }
-  &__content{
+  &__animate{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
-    min-width: 400px;
-    width: 800px;
-    height:800px;
+    width: 100px;
+    height:100px;
     background-color: white;
     border-radius: 50%;
     transform: scale(0);
-    transition: all .5s ease-in;
+    transition: all .4s ease-in;
     transition-delay: .5s;
   }
+  &__content{
+    position: absolute;
+    max-width: 400px;
+    min-width: 300px;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: all .4s ease-in;
+    transition-delay: .7s;
+  }
 }
-
 .btn__report{
   transition: all .85s ease-in-out;
   border-radius: 36px;

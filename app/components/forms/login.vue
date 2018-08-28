@@ -1,7 +1,7 @@
 <template>
   <form class="form" >
     <div class="logo">
-      <img src="../../assets/img/logo.svg" alt="">
+      <img src="../../assets/img/logo.svg" alt="Logo de Cultura Etica y Convivencia Ciudadana">
     </div>
     <v-text-field
       v-validate="'required|email'"
@@ -76,13 +76,6 @@
       login (redirect){
         this.$router.push('/')
       }
-      // clear () {
-      //   this.name = ''
-      //   this.email = ''
-      //   this.select = null
-      //   this.checkbox = null
-      //   this.$validator.reset()
-      // }
     }
   }
 </script>

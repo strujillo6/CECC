@@ -32,11 +32,7 @@ export default {
   padding: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(290px, 1fr));
-  grid-gap: 1em;
-  padding-bottom: em(74);
-  @include breakpoint(tablet){
-    padding-bottom: em(30);
-  }
+  grid-gap: 1em; 
 }
 </style>
 
