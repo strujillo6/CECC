@@ -1,5 +1,7 @@
 import Vuex from 'vuex'
-import moduleLocation from './location/index'
+import moduleLocation from './location'
+import moduleUser from './user'
+import moduleActivitys from './activitys'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -15,7 +17,9 @@ const createStore = () => {
       }
     },
     modules: {
-      location: moduleLocation
+      location: moduleLocation,
+      user: moduleUser,
+      activitys: moduleActivitys
     }
   })
 }
