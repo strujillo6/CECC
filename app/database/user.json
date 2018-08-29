@@ -1,13 +1,12 @@
 {
-  "user": [
-    {
       "id": 1,
-      "name": "User Test",
-      "last-name": "Last Name Test",
+      "name": "Santiago",
+      "lastName": "Valbuena Trujillo",
       "email": "email@test.co",
       "phone": "300300300",
-      "": "Sr",
-      "edad":"",
+      "Gener": "Sr",
+      "age":"",
+      "imagePerfil":"https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
       "activity-favorites": [
         {
           "id":"1",
@@ -53,5 +52,3 @@
         }
       ]
     }
-  ]
-}
