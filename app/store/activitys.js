@@ -20,6 +20,7 @@ const moduleActivitys = {
       activitys ()
     }
   }
+
 };
 
 export default moduleActivitys
