@@ -9,19 +9,19 @@
           slot="activator"
 
         >
-          <img src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460" alt="avatar">
+          <img :src="user.imagePerfil" :alt="user.name">
         </v-avatar>
 
       <v-card>
         <v-list>
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
+              <img :src="user.imagePerfil" :alt="user.name">
             </v-list-tile-avatar>
 
             <v-list-tile-content>
-              <v-list-tile-title>{{name}}</v-list-tile-title>
-              <v-list-tile-sub-title>Trujillo del Valle</v-list-tile-sub-title>
+              <v-list-tile-title>{{user.name}}</v-list-tile-title>
+              <v-list-tile-sub-title> {{user.lastName}} </v-list-tile-sub-title>
             </v-list-tile-content>
 
             <v-list-tile-action>
@@ -53,9 +53,13 @@
     </v-menu>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
-  data: () => ({
-    name:"sergio"
-  })
+  computed:
+  {
+    ...mapState({
+      user: state => state.user.user,
+    })
+  }
 }
 </script>

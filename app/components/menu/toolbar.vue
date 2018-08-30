@@ -7,12 +7,12 @@
     <v-btn flat icon v-if="!menu">
       <v-icon>navigate_before</v-icon>
     </v-btn>
-    <div class="logo">
+    <div class="logo" v-if="menu">
       <img src="../../assets/img/logo-flat.svg" alt="Logo de Cultura Etica y Convivencia Ciudadana">
     </div>
     <v-toolbar-title>{{title}}</v-toolbar-title>
     <v-spacer></v-spacer>
-    
+
     <v-toolbar-items class="menu__toolbar--hidden" v-if="menu">
       <cecc-menu/>
     </v-toolbar-items>
@@ -27,7 +27,7 @@ import Carduser from './menu-user'
 import Cmenu from './menu-links'
 export default {
   components: {
-    'cecc-card-user':Carduser, 
+    'cecc-card-user':Carduser,
     'cecc-menu': Cmenu
   },
   props: {

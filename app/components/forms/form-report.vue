@@ -1,6 +1,6 @@
 <template>
   <div class="container__form__main">
-    <section id="container__items__form" class="container__items__form" >
+    <section id="container__items__form" class="container__items__form"  ref="y">
       <div class="item__form">
         <v-select
           :items="items"
@@ -8,16 +8,15 @@
         />
       </div>
       <div class="item__form">
-        <h2>Ubicación</h2>
+        <h2 class="pb-2">Ubicación</h2>
         <cecc-map class="item__form__map" :locale="location" />
       </div>
       <div class="item__form">
-        <v-text-field
-          v-model="name"
-          :rules="nameRules"
-          :counter="10"
-          label="Name"
-          required
+        <v-textarea
+          name="description"
+          label="Descripción"
+          hint="Breve descripción del problema"
+
         />
       </div>
       <div class="item__form">
@@ -25,8 +24,14 @@
       </div>
     </section>
     <section class="container__actions">
-      <v-btn class="action__back" flat @click="back" v-if="transform >= 24">atras</v-btn>
-      <v-btn class="action__next" flat @click="next" v-if="transform <= 74">siguiente</v-btn>
+      <v-btn class="action__back" flat @click="back"  v-if="transform >= 24">
+        atras
+        <v-icon>navigate_before</v-icon>
+      </v-btn>
+      <v-btn class="action__next" flat @click="next" v-if="transform <= 74">
+        <v-icon>navigate_next</v-icon>
+        siguiente
+      </v-btn>
     </section>
   </div>
 </template>
@@ -44,7 +49,7 @@ export default {
       'Reclamo'
     ],
     transform: 0,
-    name: "",
+    description: "",
     nameRules: [
         v => !!v || 'El campo es requerido',
         v => v.length <= 10 || 'Name must be less than 10 characters'
@@ -82,6 +87,7 @@ export default {
     & .action__back,
     & .action__next{
       position: absolute;
+      color: #3f51b5;
     }
     & .action__back{
       left: 0;

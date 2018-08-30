@@ -1,18 +1,18 @@
 <template>
     <v-card  >
         <v-card-media
-            src="https://picsum.photos/450/700/?random"
+            :src="event.image"
             height="200px"
-            class="aling-end"
-           
+            class="card__media"
+            @click="viewEvent(event.id)"
         >
             <v-card-title primary-title class=" title__event">
-                    <div class="headline ">Titulo</div>
+                    <div class="headline "> {{event.title}} </div>
                     <div>Lugar</div>
-            </v-card-title>                
+            </v-card-title>
         </v-card-media>
         <v-card-actions>
-            <h3 class="pl-2">20-08-2018</h3>
+            <h3 class="pl-2"> {{event.date}} </h3>
             <v-spacer></v-spacer>
             <v-btn icon>
             <v-icon>favorite</v-icon>
@@ -25,21 +25,32 @@
 </template>
 <script>
 export default {
-    props:{
-        type:Object
+  props:{
+    event:{
+      type: Object
     }
+  },
+   methods: {
+     viewEvent(_id){
+       this.$router.push('/actividades/'+ _id)
+     }
+   }
 }
 </script>
 <style>
-.aling-end{
+.card__media{
     align-items: flex-end;
+    cursor: pointer;
 }
 .title__event{
     width: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 100%);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    height: 200px;
+    background: linear-gradient(180deg, rgba(0,0,0,.3) 10%, rgba(0,0,0,0.7) 100%);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    display: flex;
+    justify-content:flex-end;
 }
 </style>

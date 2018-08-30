@@ -25,11 +25,11 @@ export default {
         link: '/reportes',
         icon: 'report'
       },
-      {
-        title: 'Conoceme',
-        link: '/',
-        icon: 'bookmarks'
-      }
+      // {
+      //   title: 'Conoceme',
+      //   link: '/',
+      //   icon: 'bookmarks'
+      // }
     ]
   }),
   props:{
