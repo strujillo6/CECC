@@ -2,8 +2,10 @@
 
 1.  [ Documento de Especificación de Requerimientos
 ](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
-1.  [ Documento de Casos de Uso
-](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
+2.  [ Documento de Casos de Uso
+](https://github.com/strujillo6/CECC/tree/master/Casos%20de%20Uso)
+3.  [ Documento de Modelo Entidad Relación
+](https://github.com/strujillo6/CECC/tree/master/Modelo%20Entidad%20Relaci%C3%B3n)
 
 _____________________________
 # Prototipado Inicial
@@ -12,8 +14,7 @@ _____________________________
 2. [Wireframe "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 3. [Mockup "Clave: Grupoetinia6"](https://xd.adobe.com/view/77d61767-6e0a-4e67-6c12-69324c6e6258-01e7/)
 4. [Logo](https://github.com/strujillo6/CECC/tree/master/Prototipado%20inicial/Logo)
-5. [Modelo Casos de Uso](https://github.com/strujillo6/CECC/blob/master/Documentaci%C3%B3n/CECC%20Casos%20de%20uso.docx)
-6. [Modelo Entidad-Relación](https://github.com/strujillo6/CECC/blob/master/Documentaci%C3%B3n/CECC%20-%20Modelo%20entidad%20relacion.jpeg)
+
 7. [Api Rest](https://github.com/andresmendigana/ApiCeCC)
 
 _____________________________
