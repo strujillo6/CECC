@@ -1,7 +1,7 @@
 # Documentación
 
 1.  [ Documento de Especificación de Requerimientos
-](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
+](https://github.com/strujillo6/CECC/tree/master/Especificaci%C3%B3n%20de%20Requerimientos)
 2.  [ Documento de Casos de Uso
 ](https://github.com/strujillo6/CECC/tree/master/Casos%20de%20Uso)
 3.  [ Documento de Modelo Entidad Relación
@@ -41,13 +41,13 @@ ____
 
 ## ¿Cómo lo vamos a resolver? 
 
-Creando un canal de participaciòn ciudadana, en el cual las personas podràn aportar ideas y realizar solicitudes de mejora en la comunidad, podràn acceder a un canal de conciliaciòn de conflictos entre vecinos y además reportar posibles inconvenientes en el barrio, como daño en las vìas, semáforos, parques, problemática de seguridad, etc.
+Creando un canal de participación ciudadana, en el cual las personas podrán aportar ideas y realizar solicitudes de mejora en la comunidad, podrán acceder a un canal de conciliación de conflictos entre vecinos y además reportar posibles inconvenientes en el barrio, como daño en las vías, semáforos, parques, problemática de seguridad, etc.
 
-Un canal informativo general: en el cual obtendrán noticias de los eventos culturales y de integracion en el barrio, normas de convivencia ciudadana, y còdigo de policía.
+Un canal informativo general: en el cual obtendrán noticias de los eventos culturales y de integración en el barrio, normas de convivencia ciudadana, y código de policía.
 
-Un canal específico: de PQR y conciliaciòn, con seguimiento y notificaciòn a las partes que intervienen.
-
-Implementando en la aplicaciòn, un sistema de concientizaciòn (mediante el aprendizaje interactivo), en el cual las personas aprenderán de forma lúdica la aplicación de las normas de convivencia.
+Un canal específico: de PQR y conciliación, con seguimiento y notificación a las partes que intervienen.
+Implementando en la aplicación, un sistema de concientización (mediante el aprendizaje interactivo), en el cual las personas aprenderán de forma lúdica la aplicación de las normas de convivencia.
 
 Implementando un canal de comunicación directo (por investigar los que manejan actualmente) con las líneas de emergencia, mediante chat o números directos del cuadrante.
+
 

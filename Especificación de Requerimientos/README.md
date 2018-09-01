@@ -42,10 +42,10 @@ Este documentos tiene como propósito dar a conocer el funcionamiento general de
 
 Nombre del Sistema: CECC, “Cultura Ética y Cultura Ciudadana”
 
-El sistema gestionará los procesos de interacción entre la comunidad que habita la Localidad de chapinero y las actividades que dicha localidad ofrece y programa regularmente, adicionalmente incluirá una sección el la cual podrá conocer de forma lúdica como tener buenos hábitos de convivencia ciudadana y otro módulo para hacer Peticiones Quejas o Reclamos, como forma de crear conciencia y que cada persona se apropie del espacio público, permitiendo que los líderes de cada barrio que conforma la localidad, la policía y demás entes competentes, estén enterados de posibles daños en la malla vial, o en la infraestructura de la localidad, riñas, problemas entre vecinos, faltas al código de polícia y puedan saber las principales necesidades que presenta la ciudadanía y poder actuar de forma efectiva. 
+El sistema gestionará los procesos de interacción entre la comunidad que habita la Localidad de chapinero y las actividades que dicha localidad ofrece y programa regularmente, adicionalmente incluirá una sección el cual podrá conocer de forma lúdica como tener buenos hábitos de convivencia ciudadana y otro módulo para hacer Peticiones Quejas o Reclamos, como forma de crear conciencia y que cada persona se apropie del espacio público, permitiendo que los líderes de cada barrio que conforma la localidad, la policía y demás entes competentes, estén enterados de posibles daños en la malla vial, o en la infraestructura de la localidad, riñas, problemas entre vecinos, faltas al código de policía y puedan saber las principales necesidades que presenta la ciudadanía y poder actuar de forma efectiva.
 
-Los principales beneficiados con la aplicación serán los habitantes de la Localidad chapinero quienes manifiestan abandono institucional e indiferencia social; mediante la aplicación podrán ver de que forma sus reclamos y peticiones son manejadas por las diferentes instituciones  y como su voz es escuchada para resolver sus necesidades.
-• La otra parte beneficiada son las mismas instituciones que conforman la localidad de chapinero, al poder manejar los reportes de los usuarios  podrán saber que tipo de habitantes conforman la localidad, que necesidades deben ser atendidas y de esta forma crear un ambiente de convivencia óptimo que ayude a la mejora social.
+Los principales beneficiados con la aplicación serán los habitantes de la Localidad chapinero quienes manifiestan abandono institucional e indiferencia social; mediante la aplicación podrán ver de qué forma sus reclamos y peticiones son manejadas por las diferentes instituciones y como su voz es escuchada para resolver sus necesidades. • La otra parte beneficiada son las mismas instituciones que conforman la localidad de chapinero, al poder manejar los reportes de los usuarios podrán saber qué tipo de habitantes conforman la localidad, que necesidades deben ser atendidas y de esta forma crear un ambiente de convivencia óptimo que ayude a la mejora social.
+
 
 ## 1.3 Definiciones, Acrónimos y Abreviaturas.
 - CECC – Cultura Ética y Cultura Ciudadana
@@ -74,7 +74,7 @@ Existen factores generales que afectan al producto y sus requerimientos. En esta
 
 ## 2.1 Perspectiva del Producto
 
-La aplicación permitirá la gestión de los datos personales de los habitantes de la localidad chapinero(situación socioeconómica), así como los PQR que generen, mostrará información relevante a las actividades de los barrios de la localidad y una forma de aprendizaje de las normas de convivencia de forma lúdica.
+La aplicación permitirá la gestión de los datos personales de los habitantes de la localidad Chapinero (situación socioeconómica), así como los PQR que generen, mostrará información relevante a las actividades de los barrios de la localidad y una forma de aprendizaje de las normas de convivencia de forma lúdica.
 
 ## 2.2 Funciones del Producto
 
