@@ -2,4 +2,4 @@
 
 # Modelo Entidad Relación
 
-![Actores](Bases_de_Datos_CECC.jpeg?raw=true)
+![Entidad Relacion](Bases_de_Datos_CECC.jpeg?raw=true)
