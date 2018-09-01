@@ -2,6 +2,8 @@
 
 1.  [ Documento de Especificación de Requerimientos
 ](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
+1.  [ Documento de Casos de Uso
+](https://github.com/strujillo6/CECC/tree/master/Documentaci%C3%B3n)
 
 _____________________________
 # Prototipado Inicial
