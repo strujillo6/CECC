@@ -6,6 +6,8 @@
 ](https://github.com/strujillo6/CECC/tree/master/Casos%20de%20Uso)
 3.  [ Documento de Modelo Entidad Relación
 ](https://github.com/strujillo6/CECC/tree/master/Modelo%20Entidad%20Relaci%C3%B3n)
+4.  [Diagrama de despliegue
+](https://github.com/strujillo6/CECC/blob/master/Documentaci%C3%B3n/Despliegue%20CECC.png)
 
 _____________________________
 # Prototipado Inicial
